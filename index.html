@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calm</title>
+  <meta name="description" content="Calm - Taking You Places" />
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene environment="preset: forest">
+    <a-assets>
+      <img id="planeTexture0" src="https://images-na.ssl-images-amazon.com/images/I/61Y9I2v2ZDL._AC_SL1500_.jpg" />
+      <img id="planeTexture1" src="https://images-na.ssl-images-amazon.com/images/I/61Y9I2v2ZDL._AC_SL1500_.jpg" />
+      <img id="planeTexture2" src="https://images-na.ssl-images-amazon.com/images/I/61Y9I2v2ZDL._AC_SL1500_.jpg" />
+    </a-assets>
+
+    <!--  first  Selection Plane -->
+    <a-plane src="#planeTexture0" position="-5 2 -5" rotation="0 0 0" scale="2 2 2"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
+    </a-plane>
+    <!--  Second  Selection Plane-->
+    <a-plane src="#planeTexture1" position="0 2 -5" rotation="0 0 0" scale="2 2 2"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
+    </a-plane>
+    <!--  Third Selection  Selection Plane -->
+    <a-plane src="#planeTexture2" position="5 2 -5" rotation="0 0 0 " scale="2 2 2"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave">
+    </a-plane>
+
+    <a-entity text="value: Welcome; color: #FAFAFA; width: 5; anchor: align" position="-0.9 0.2 -3" scale="1.5 1.5 1.5">
+    </a-entity>
+
+    <!--First Selection -->
+    <a-entity text="value: Location 1; color: #FAFAFA; width: 5; anchor: align" position="-4.6 1.2 -4"
+      scale="1.0 1.0 1.0"></a-entity>
+
+    <!-- Second Selection -->
+    <a-entity text="value: Location 2; color: #FAFAFA; width: 5; anchor: align" position="-0.6 1.2 -5"
+      scale="1.0 1.0 1.0"></a-entity>
+
+    <!--Third Selection-->
+    <a-entity text="value: Location 3; color: #FAFAFA; width: 5; anchor: align" position="4.5 1.2 -5"
+      scale="1.0 1.0 1.0"></a-entity>
+
+    <a-camera>
+      <a-cursor color="#FAFAFA"></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
